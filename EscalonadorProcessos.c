@@ -1,14 +1,14 @@
 /**
 *** Universidade Federal de Santa Catarina
-*** ExercÌcio programa da disciplina de Estruturas de Dados 2015/2
+*** Exerc√≠cio programa da disciplina de Estruturas de Dados 2015/2
 *** Alunos: Christian Roger Gaio (14202477) e Luan Rodrigues Silva (14209239)
-*** Professor: ¡lvaro Junio
+*** Professor: √Ålvaro Junio
 
 
-        DescriÁ„o do programa: o programa lÍ atÈ dois arquivos no formato
+        Descri√ß√£o do programa: o programa l√™ at√© dois arquivos no formato
     txt e transforma ele em um tipo de dado abstrato chamado matriz
     que armazena a quantidade de linhas, colunas e um vetor com
-    v·rias listas encadeadas com cabeca. Na matriz n„o s„o armazenados
+    v√°rias listas encadeadas com cabeca. Na matriz n√£o s√£o armazenados
     valores iguais a 0.
 
 */
