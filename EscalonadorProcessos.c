@@ -1,32 +1,32 @@
 /**
 *** Universidade Federal de Santa Catarina
-*** ExercÌcio programa da disciplina de Estruturas de Dados 2015/2
+*** Exerc√≠cio programa da disciplina de Estruturas de Dados 2015/2
 *** Alunos: Christian Roger Gaio (14202477) e Luan Rodrigues Silva (14209239)
-*** Professor: ¡lvaro Junio
+*** Professor: √Ålvaro Junio
 
 
     Escalonador de Processos Simplificado
 
-        Um processo pode ser visto como um conjunto de instruÁıes que deve ser executado pelo
-    processador de uma m·quina. A cada instante de tempo, um sistema de escalonamento de
+        Um processo pode ser visto como um conjunto de instru√ß√µes que deve ser executado pelo
+    processador de uma m√°quina. A cada instante de tempo, um sistema de escalonamento de
     processos deve escolher um processo para ser executado por um processador. Cada processo
-    tem o seu identificador ˙nico (formado pelo prefixo ìidî seguido por um n˙mero inteiro entre 1
-    e 5000), o tempo necess·rio para executar todas as suas instruÁıes no processador (um n˙mero
-    inteiro entre 1 e 100 (unidade em milisegundos)), e a prioridade do processo (um n˙umero inteiro
-    entre 1 e 1000). A cada instante de tempo, ou o processador fica ocioso (n„o existe processo
-    esperando na fila para ser executado), ou um novo processo È escolhido espontaneamente para
-    ser executado (termina a execu∏còao de um processo), ou um processo È escolhido abruptamente
-    para ser executado (passaram 50 ms de execuÁ„o de um processo).
+    tem o seu identificador √∫nico (formado pelo prefixo ‚Äúid‚Äù seguido por um n√∫mero inteiro entre 1
+    e 5000), o tempo necess√°rio para executar todas as suas instru√ß√µes no processador (um n√∫mero
+    inteiro entre 1 e 100 (unidade em milisegundos)), e a prioridade do processo (um n√∫umero inteiro
+    entre 1 e 1000). A cada instante de tempo, ou o processador fica ocioso (n√£o existe processo
+    esperando na fila para ser executado), ou um novo processo √© escolhido espontaneamente para
+    ser executado (termina a execu¬∏cÀúao de um processo), ou um processo √© escolhido abruptamente
+    para ser executado (passaram 50 ms de execu√ß√£o de um processo).
 
 
-    DescriÁ„o das funÁıes:
+    Descri√ß√£o das fun√ß√µes:
 
         int addHeap(processo v[], int n)
             - recebe um vetor de processos com um heap adicionado e o numero de posicoes e insere
               um heap na ultima posicao, devolve o numero de posicoes antigo mais um
 
         void heapfica(processo v[], int n)
-            - recebe um quase max heap por baixo e heapfica o vetor atÈ ele se tornar um heap completo
+            - recebe um quase max heap por baixo e heapfica o vetor at√© ele se tornar um heap completo
 
         void ler(processo v[], int n)
             - mostra cada processo de uma fila de prioridades junto com seu, id, tempo e prioridade
@@ -38,7 +38,7 @@
             - retira o maior elemento do vetor e troca pelo ultimo da fila
 
         void heapficaDeCima(processo v[], int n, int pai)
-            - recebe um quase max heap por cima e heapfica o vetor atÈ ele se tornar um heap completo
+            - recebe um quase max heap por cima e heapfica o vetor at√© ele se tornar um heap completo
 
 
         Exemplo de entrada:
@@ -62,10 +62,10 @@
             25
             30
 
-        O usu·rio pediu para colocar quatro processos na nova fila de prioridade, apÛs isso foi inseridas trÍs entradas para cada processo, a primeira
-               o id, segunda o tempo e a terceira a prioridade. ApÛs isso os processos s„o colocados em um vetor, mais precisamente em um max heap das
-               prioridades, depois o programa executar· o processo que est· no topo da fila de prioridade e remove ele depois de executar, heapficando
-               novamente a fila atÈ ser executado o prÛximo processo, quando n„o houver mais procesos o processador ficar· ocioso.
+        O usu√°rio pediu para colocar quatro processos na nova fila de prioridade, ap√≥s isso foi inseridas tr√™s entradas para cada processo, a primeira
+               o id, segunda o tempo e a terceira a prioridade. Ap√≥s isso os processos s√£o colocados em um vetor, mais precisamente em um max heap das
+               prioridades, depois o programa executar√° o processo que est√° no topo da fila de prioridade e remove ele depois de executar, heapficando
+               novamente a fila at√© ser executado o pr√≥ximo processo, quando n√£o houver mais procesos o processador ficar√° ocioso.
 */
 #include <locale.h>
 #include <stdio.h>
@@ -91,7 +91,7 @@ int main() {
     setlocale(LC_ALL, "Portuguese");
     i = 1;
 
-    printf("Digite a quantidade de processos que vocÍ quer colocar na fila de prioridade\n");
+    printf("Digite a quantidade de processos que voc√™ quer colocar na fila de prioridade\n");
     scanf("%i", &n);
 
 
@@ -170,7 +170,7 @@ void ler(processo v[], int n) {
 }
 
 void lerProcesso(processo v[], int k) {
-    printf("\n\n\nPrÛximo processo para ser executado: \nId: %i\nTempo: %i ms\nPrioridade: %i\n\n", v[k].id,v[k].tempo,v[k].prioridade);
+    printf("\n\n\nPr√≥ximo processo para ser executado: \nId: %i\nTempo: %i ms\nPrioridade: %i\n\n", v[k].id,v[k].tempo,v[k].prioridade);
 }
 
 void removefila(processo v[], int n, int k) {
